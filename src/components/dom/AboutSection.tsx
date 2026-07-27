@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { PERSONAL_INFO } from '@/lib/constants';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
@@ -24,15 +25,33 @@ export default function AboutSection() {
         />
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left: Profile */}
-          <motion.div {...fadeInUp} className="space-y-6">
-            <div className="relative">
-              <div className="w-48 h-48 rounded-2xl bg-gradient-to-br from-[#00F0FF] to-[#8A2BE2] p-[2px] mx-auto lg:mx-0">
-                <div className="w-full h-full rounded-2xl bg-[#0A0A0A] flex items-center justify-center text-5xl">
-                  👨‍💻
-                </div>
-              </div>
-            </div>
+           {/* Left: Profile */}
+           <motion.div {...fadeInUp} className="space-y-6">
+             <div className="relative">
+               {/* Animated background glow */}
+               <motion.div
+                 animate={{ 
+                   boxShadow: [
+                     '0 0 20px rgba(0, 240, 255, 0.3)',
+                     '0 0 40px rgba(138, 43, 226, 0.3)',
+                     '0 0 20px rgba(0, 240, 255, 0.3)',
+                   ]
+                 }}
+                 transition={{ duration: 3, repeat: Infinity }}
+                 className="w-64 h-64 rounded-3xl bg-gradient-to-br from-[#00F0FF] to-[#8A2BE2] p-[3px] mx-auto lg:mx-0"
+               >
+                 <div className="w-full h-full rounded-3xl bg-[#0A0A0A] overflow-hidden">
+                   <Image
+                     src="/profile.jpg"
+                     alt={PERSONAL_INFO.shortName}
+                     width={256}
+                     height={256}
+                     className="w-full h-full object-cover"
+                     priority
+                   />
+                 </div>
+               </motion.div>
+             </div>
             <p className="text-gray-400 leading-relaxed">
               Saya adalah seorang <span className="text-white font-semibold">{PERSONAL_INFO.status}</span> yang
               bersemangat dalam menciptakan solusi digital modern. Dengan pengalaman dalam
