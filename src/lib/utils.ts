@@ -1,5 +1,3 @@
-import { type ClassValue, clsx } from 'clsx';
-
 // Simple cn utility without clsx/twMerge to avoid extra deps
 export function cn(...inputs: (string | undefined | null | false)[]): string {
   return inputs.filter(Boolean).join(' ');

@@ -89,7 +89,7 @@ export default function AboutSection() {
                     initial={{ width: 0 }}
                     whileInView={{ width: `${skill.level}%` }}
                     viewport={{ once: true }}
-                    transition={{ duration: 1, ease: 'easeOut', delay: 0.2 }}
+                    transition={{ duration: 1, delay: 0.2 }}
                     className="h-full bg-gradient-to-r from-[#00F0FF] to-[#8A2BE2] rounded-full"
                   />
                 </div>
