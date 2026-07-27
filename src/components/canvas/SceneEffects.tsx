@@ -34,15 +34,16 @@ export default function SceneEffects() {
           count={particlesCount}
           array={positions}
           itemSize={3}
+          args={[positions, 3]}
         />
-      </bufferGeometry>
-      <pointsMaterial
-        size={0.02}
-        color="#00F0FF"
-        transparent
-        opacity={0.6}
-        sizeAttenuation
-      />
+    </bufferGeometry>
+        <pointsMaterial
+          size={0.02}
+          color="#00F0FF"
+          transparent
+          opacity={0.6}
+          sizeAttenuation
+        />
     </points>
   );
 }
