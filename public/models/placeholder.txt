@@ -1,0 +1,2 @@
+Tempatkan file model 3D (.glb/.gltf) di folder ini.
+Gunakan Draco compression sesuai Rules.md.
