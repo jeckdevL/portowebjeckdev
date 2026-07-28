@@ -1,48 +1,58 @@
 'use client';
 
+import { ReactNode } from 'react';
 import { motion } from 'framer-motion';
-import { cn } from '@/lib/utils';
 
 interface ButtonProps {
-  children: React.ReactNode;
+  children: ReactNode;
   variant?: 'primary' | 'secondary' | 'outline';
-  href?: string;
-  onClick?: () => void;
+  size?: 'sm' | 'md' | 'lg';
   className?: string;
-  type?: 'button' | 'submit';
+  onClick?: () => void;
+  type?: 'button' | 'submit' | 'reset';
+  disabled?: boolean;
+  href?: string;
+  target?: string;
+  rel?: string;
 }
 
 export default function Button({
   children,
   variant = 'primary',
-  href,
+  size = 'md',
+  className = '',
   onClick,
-  className,
   type = 'button',
+  disabled = false,
+  href,
+  target,
+  rel,
 }: ButtonProps) {
-  const baseStyle =
-    'inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base';
+  const baseStyles = 'font-medium transition-all duration-300 rounded-full inline-flex items-center justify-center gap-2';
 
-  const variants = {
-    primary:
-      'bg-black text-light-gray hover:bg-light-gray hover:text-black',
-    secondary:
-      'bg-white/10 text-white backdrop-blur-sm border border-white/20 hover:bg-white/20',
-    outline:
-      'border border-light-gray text-light-gray hover:bg-light-gray/10',
+  const sizeStyles = {
+    sm: 'px-4 py-2 text-xs',
+    md: 'px-6 py-3 text-sm',
+    lg: 'px-8 py-4 text-base',
   };
 
-  const classes = cn(baseStyle, variants[variant], className);
+  const variantStyles = {
+    primary: 'bg-white text-black hover:bg-white/90 disabled:bg-white/50',
+    secondary: 'bg-transparent text-white border border-white/20 hover:bg-white hover:text-black hover:border-white disabled:opacity-50',
+    outline: 'border border-white/30 text-white hover:bg-white/5 disabled:opacity-50',
+  };
+
+  const combinedStyles = `${baseStyles} ${sizeStyles[size]} ${variantStyles[variant]} ${className}`;
 
   if (href) {
     return (
       <motion.a
         href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={classes}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
+        target={target}
+        rel={rel}
+        className={combinedStyles}
+        whileHover={{ scale: 1.02 }}
+        whileTap={{ scale: 0.98 }}
       >
         {children}
       </motion.a>
@@ -53,9 +63,10 @@ export default function Button({
     <motion.button
       type={type}
       onClick={onClick}
-      className={classes}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
+      disabled={disabled}
+      className={combinedStyles}
+      whileHover={!disabled ? { scale: 1.02 } : {}}
+      whileTap={!disabled ? { scale: 0.98 } : {}}
     >
       {children}
     </motion.button>

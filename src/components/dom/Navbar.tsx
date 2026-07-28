@@ -28,7 +28,7 @@ export default function Navbar() {
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-transparent backdrop-blur-lg border-b border-white/10'
+          ? 'bg-black/80 backdrop-blur-lg border-b border-white/5'
           : 'bg-transparent'
       }`}
     >
@@ -41,13 +41,13 @@ export default function Navbar() {
               e.preventDefault();
               scrollTo('#home');
             }}
-            className="text-xl font-bold bg-gradient-to-r from-[#00F0FF] to-[#8A2BE2] bg-clip-text text-transparent"
+            className="text-lg font-bold text-white tracking-tight"
           >
             {PERSONAL_INFO.shortName}
           </a>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-12">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -56,18 +56,22 @@ export default function Navbar() {
                   e.preventDefault();
                   scrollTo(link.href);
                 }}
-                className="text-gray-300 hover:text-[#00F0FF] transition-colors duration-300 text-sm font-medium"
+                className="text-white/70 hover:text-white transition-colors duration-300 text-sm font-medium"
               >
                 {link.label}
               </a>
             ))}
+          </div>
+
+          {/* CTA Button */}
+          <div className="hidden md:block">
             <a
               href={PERSONAL_INFO.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 bg-gradient-to-r from-[var(--token-accent-yellow)] to-[var(--token-accent-pink)] text-black rounded-lg font-semibold text-sm hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
+              className="px-6 py-2.5 bg-white text-black rounded-full text-sm font-medium hover:bg-white/90 transition-all duration-300"
             >
-              Hire Me
+              Contact
             </a>
           </div>
 
@@ -77,7 +81,7 @@ export default function Navbar() {
             className="md:hidden text-white p-2"
             aria-label="Toggle menu"
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
               {isMobileMenuOpen ? (
                 <path d="M6 18L18 6M6 6l12 12" />
               ) : (
@@ -95,7 +99,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-transparent backdrop-blur-lg border-b border-white/10"
+            className="md:hidden bg-black/95 backdrop-blur-lg border-b border-white/5"
           >
             <div className="px-4 py-4 space-y-3">
               {navLinks.map((link) => (
@@ -106,7 +110,7 @@ export default function Navbar() {
                     e.preventDefault();
                     scrollTo(link.href);
                   }}
-                  className="block text-gray-300 hover:text-[var(--token-accent-yellow)] transition-colors py-2"
+                  className="block text-white/70 hover:text-white transition-colors py-2 text-sm"
                 >
                   {link.label}
                 </a>
@@ -115,9 +119,9 @@ export default function Navbar() {
                 href={PERSONAL_INFO.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block text-center px-4 py-3 bg-gradient-to-r from-[var(--token-accent-yellow)] to-[var(--token-accent-pink)] text-black rounded-lg font-semibold"
+                className="block text-center px-4 py-3 bg-white text-black rounded-full font-medium text-sm mt-4"
               >
-                Hire Me
+                Contact
               </a>
             </div>
           </motion.div>

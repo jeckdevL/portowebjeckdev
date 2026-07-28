@@ -99,14 +99,14 @@ export default function MagneticButton({
         >
         {/* Animated background */}
         <motion.div
-          className="absolute inset-0 bg-gradient-to-r from-[var(--token-accent-yellow)] to-[var(--token-accent-pink)]"
+          className="absolute inset-0 bg-white rounded-lg"
           initial={{ scale: 0, opacity: 0 }}
           whileHover={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.3 }}
         />
 
         {/* Button content */}
-        <span className="relative z-10">{children}</span>
+        <span className="relative z-10 text-black">{children}</span>
 
         {/* Ripple effect on hover */}
         <motion.div
@@ -118,7 +118,7 @@ export default function MagneticButton({
             transition: { duration: 0.6 },
           }}
           style={{
-            background: 'radial-gradient(circle, rgba(255,215,0,0.4) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%)',
           }}
         />
         </motion.a>
@@ -131,14 +131,14 @@ export default function MagneticButton({
         >
           {/* Animated background */}
           <motion.div
-            className="absolute inset-0 bg-gradient-to-r from-[var(--token-accent-yellow)] to-[var(--token-accent-pink)]"
+            className="absolute inset-0 bg-white rounded-lg"
             initial={{ scale: 0, opacity: 0 }}
             whileHover={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.3 }}
           />
 
           {/* Button content */}
-          <span className="relative z-10">{children}</span>
+          <span className="relative z-10 text-black">{children}</span>
 
           {/* Ripple effect on hover */}
           <motion.div
@@ -150,7 +150,7 @@ export default function MagneticButton({
               transition: { duration: 0.6 },
             }}
             style={{
-              background: 'radial-gradient(circle, rgba(255,215,0,0.4) 0%, transparent 70%)',
+              background: 'radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%)',
             }}
           />
         </motion.button>

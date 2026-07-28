@@ -1,0 +1,373 @@
+
+> portofolio-3d@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.12 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://172.30.8.166:3000
+✓ Ready in 1290ms
+
+○ Compiling / ...
+⨯ ./src/app/globals.css:1130:8
+Parsing CSS source code failed
+  [90m1128 |[0m   }
+  [90m1129 |[0m }
+[31m[1m>[0m [90m1130 |[0m @[36mimport[0m url([32m'https://fonts.googleapis.com/css2?family=Nunito...[0m
+  [90m     |[0m        [31m[1m^[0m
+  [90m1131 |[0m :root {
+  [90m1132 |[0m   --token-black: #[35m000[0m;
+  [90m1133 |[0m   --token-light-gray: #e1e1e1;
+
+@import rules must precede all rules aside from @charset and @layer statements
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:1130:8
+  [90m1128 |[0m   }
+  [90m1129 |[0m }
+[31m[1m>[0m [90m1130 |[0m @[36mimport[0m url([32m'https://fonts.googleapis.com/css2?family=Nunito...[0m
+  [90m     |[0m        [31m[1m^[0m
+  [90m1131 |[0m :root {
+  [90m1132 |[0m   --token-black: #[35m000[0m;
+  [90m1133 |[0m   --token-light-gray: #e1e1e1;
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+
+
+○ Compiling /_error ...
+ GET / 500 in 28.5s (next.js: 28.1s, application-code: 391ms)
+[browser] Uncaught Error: ./src/app/globals.css:1130:8
+Parsing CSS source code failed
+  1128 |   }
+  1129 | }
+> 1130 | @import url('https://fonts.googleapis.com/css2?family=Nunito...
+       |        ^
+  1131 | :root {
+  1132 |   --token-black: #000;
+  1133 |   --token-light-gray: #e1e1e1;
+
+@import rules must precede all rules aside from @charset and @layer statements
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:1130:8
+  1128 |   }
+  1129 | }
+> 1130 | @import url('https://fonts.googleapis.com/css2?family=Nunito...
+       |        ^
+  1131 | :root {
+  1132 |   --token-black: #000;
+  1133 |   --token-light-gray: #e1e1e1;
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+
+
+    at <unknown> (Error: ./src/app/globals.css:1130:8)
+    at <unknown> (./src/app/globals.css:1130:8)
+    at <unknown> (Error: (./src/app/globals.css:1130:8)
+    at <unknown> (./src/app/globals.css:1130:8)
+[browser] ./src/app/globals.css:1130:8
+Parsing CSS source code failed
+  1128 |   }
+  1129 | }
+> 1130 | @import url('https://fonts.googleapis.com/css2?family=Nunito...
+       |        ^
+  1131 | :root {
+  1132 |   --token-black: #000;
+  1133 |   --token-light-gray: #e1e1e1;
+
+@import rules must precede all rules aside from @charset and @layer statements
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:1130:8
+  1128 |   }
+  1129 | }
+> 1130 | @import url('https://fonts.googleapis.com/css2?family=Nunito...
+       |        ^
+  1131 | :root {
+  1132 |   --token-black: #000;
+  1133 |   --token-light-gray: #e1e1e1;
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component] 
+    at handleErrors (file:///home/jeck/Desktop/porto v2/portofolio-3d/.next/dev/static/chunks/node_modules_next_dist_client_16lnmlo._.js:2774:21)
+    at processMessage (file:///home/jeck/Desktop/porto v2/portofolio-3d/.next/dev/static/chunks/node_modules_next_dist_client_16lnmlo._.js:2835:28)
+    at <unknown> (file:///home/jeck/Desktop/porto v2/portofolio-3d/.next/dev/static/chunks/node_modules_next_dist_client_16lnmlo._.js:2680:13)
+    at WebSocket.handleMessage (file:///home/jeck/Desktop/porto v2/portofolio-3d/.next/dev/static/chunks/node_modules_next_dist_client_16lnmlo._.js:2325:17) (file:///home/jeck/Desktop/porto v2/portofolio-3d/.next/dev/static/chunks/node_modules_next_dist_client_16lnmlo._.js:2774:21)
+[browser] ./src/app/globals.css:1130:8
+Parsing CSS source code failed
+  1128 |   }
+  1129 | }
+> 1130 | @import url('https://fonts.googleapis.com/css2?family=Nunito...
+       |        ^
+  1131 | :root {
+  1132 |   --token-black: #000;
+  1133 |   --token-light-gray: #e1e1e1;
+
+@import rules must precede all rules aside from @charset and @layer statements
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:1130:8
+  1128 |   }
+  1129 | }
+> 1130 | @import url('https://fonts.googleapis.com/css2?family=Nunito...
+       |        ^
+  1131 | :root {
+  1132 |   --token-black: #000;
+  1133 |   --token-light-gray: #e1e1e1;
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component] 
+    at handleErrors (file:///home/jeck/Desktop/porto v2/portofolio-3d/.next/dev/static/chunks/node_modules_next_dist_client_16lnmlo._.js:2774:21)
+    at processMessage (file:///home/jeck/Desktop/porto v2/portofolio-3d/.next/dev/static/chunks/node_modules_next_dist_client_16lnmlo._.js:2835:28)
+    at <unknown> (file:///home/jeck/Desktop/porto v2/portofolio-3d/.next/dev/static/chunks/node_modules_next_dist_client_16lnmlo._.js:2680:13)
+    at WebSocket.handleMessage (file:///home/jeck/Desktop/porto v2/portofolio-3d/.next/dev/static/chunks/node_modules_next_dist_client_16lnmlo._.js:2325:17) (file:///home/jeck/Desktop/porto v2/portofolio-3d/.next/dev/static/chunks/node_modules_next_dist_client_16lnmlo._.js:2774:21)
+[browser] ./src/app/globals.css:1130:8
+Parsing CSS source code failed
+  1128 |   }
+  1129 | }
+> 1130 | @import url('https://fonts.googleapis.com/css2?family=Nunito...
+       |        ^
+  1131 | :root {
+  1132 |   --token-black: #000;
+  1133 |   --token-light-gray: #e1e1e1;
+
+@import rules must precede all rules aside from @charset and @layer statements
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:1130:8
+  1128 |   }
+  1129 | }
+> 1130 | @import url('https://fonts.googleapis.com/css2?family=Nunito...
+       |        ^
+  1131 | :root {
+  1132 |   --token-black: #000;
+  1133 |   --token-light-gray: #e1e1e1;
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component] 
+    at handleErrors (file:///home/jeck/Desktop/porto v2/portofolio-3d/.next/dev/static/chunks/node_modules_next_dist_client_16lnmlo._.js:2774:21)
+    at processMessage (file:///home/jeck/Desktop/porto v2/portofolio-3d/.next/dev/static/chunks/node_modules_next_dist_client_16lnmlo._.js:2835:28)
+    at <unknown> (file:///home/jeck/Desktop/porto v2/portofolio-3d/.next/dev/static/chunks/node_modules_next_dist_client_16lnmlo._.js:2680:13)
+    at WebSocket.handleMessage (file:///home/jeck/Desktop/porto v2/portofolio-3d/.next/dev/static/chunks/node_modules_next_dist_client_16lnmlo._.js:2325:17) (file:///home/jeck/Desktop/porto v2/portofolio-3d/.next/dev/static/chunks/node_modules_next_dist_client_16lnmlo._.js:2774:21)
+[browser] ./src/app/globals.css:1130:8
+Parsing CSS source code failed
+  1128 |   }
+  1129 | }
+> 1130 | @import url('https://fonts.googleapis.com/css2?family=Nunito...
+       |        ^
+  1131 | :root {
+  1132 |   --token-black: #000;
+  1133 |   --token-light-gray: #e1e1e1;
+
+@import rules must precede all rules aside from @charset and @layer statements
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:1130:8
+  1128 |   }
+  1129 | }
+> 1130 | @import url('https://fonts.googleapis.com/css2?family=Nunito...
+       |        ^
+  1131 | :root {
+  1132 |   --token-black: #000;
+  1133 |   --token-light-gray: #e1e1e1;
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component] 
+    at handleErrors (file:///home/jeck/Desktop/porto v2/portofolio-3d/.next/dev/static/chunks/node_modules_next_dist_client_16lnmlo._.js:2774:21)
+    at processMessage (file:///home/jeck/Desktop/porto v2/portofolio-3d/.next/dev/static/chunks/node_modules_next_dist_client_16lnmlo._.js:2835:28)
+    at <unknown> (file:///home/jeck/Desktop/porto v2/portofolio-3d/.next/dev/static/chunks/node_modules_next_dist_client_16lnmlo._.js:2680:13)
+    at WebSocket.handleMessage (file:///home/jeck/Desktop/porto v2/portofolio-3d/.next/dev/static/chunks/node_modules_next_dist_client_16lnmlo._.js:2325:17) (file:///home/jeck/Desktop/porto v2/portofolio-3d/.next/dev/static/chunks/node_modules_next_dist_client_16lnmlo._.js:2774:21)
+⨯ ./src/app/globals.css:1130:8
+Parsing CSS source code failed
+  [90m1128 |[0m   }
+  [90m1129 |[0m }
+[31m[1m>[0m [90m1130 |[0m @[36mimport[0m url([32m'https://fonts.googleapis.com/css2?family=Nunito...[0m
+  [90m     |[0m        [31m[1m^[0m
+  [90m1131 |[0m :root {
+  [90m1132 |[0m   --token-black: #[35m000[0m;
+  [90m1133 |[0m   --token-light-gray: #e1e1e1;
+
+@import rules must precede all rules aside from @charset and @layer statements
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:1130:8
+  [90m1128 |[0m   }
+  [90m1129 |[0m }
+[31m[1m>[0m [90m1130 |[0m @[36mimport[0m url([32m'https://fonts.googleapis.com/css2?family=Nunito...[0m
+  [90m     |[0m        [31m[1m^[0m
+  [90m1131 |[0m :root {
+  [90m1132 |[0m   --token-black: #[35m000[0m;
+  [90m1133 |[0m   --token-light-gray: #e1e1e1;
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+
+
+ GET / 500 in 80ms (next.js: 39ms, application-code: 41ms)
+[browser] Uncaught Error: ./src/app/globals.css:1130:8
+Parsing CSS source code failed
+  1128 |   }
+  1129 | }
+> 1130 | @import url('https://fonts.googleapis.com/css2?family=Nunito...
+       |        ^
+  1131 | :root {
+  1132 |   --token-black: #000;
+  1133 |   --token-light-gray: #e1e1e1;
+
+@import rules must precede all rules aside from @charset and @layer statements
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:1130:8
+  1128 |   }
+  1129 | }
+> 1130 | @import url('https://fonts.googleapis.com/css2?family=Nunito...
+       |        ^
+  1131 | :root {
+  1132 |   --token-black: #000;
+  1133 |   --token-light-gray: #e1e1e1;
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+
+
+    at <unknown> (Error: ./src/app/globals.css:1130:8)
+    at <unknown> (./src/app/globals.css:1130:8)
+    at <unknown> (Error: (./src/app/globals.css:1130:8)
+    at <unknown> (./src/app/globals.css:1130:8)
+[browser] ./src/app/globals.css:1130:8
+Parsing CSS source code failed
+  1128 |   }
+  1129 | }
+> 1130 | @import url('https://fonts.googleapis.com/css2?family=Nunito...
+       |        ^
+  1131 | :root {
+  1132 |   --token-black: #000;
+  1133 |   --token-light-gray: #e1e1e1;
+
+@import rules must precede all rules aside from @charset and @layer statements
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:1130:8
+  1128 |   }
+  1129 | }
+> 1130 | @import url('https://fonts.googleapis.com/css2?family=Nunito...
+       |        ^
+  1131 | :root {
+  1132 |   --token-black: #000;
+  1133 |   --token-light-gray: #e1e1e1;
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component] 
+    at handleErrors (file:///home/jeck/Desktop/porto v2/portofolio-3d/.next/dev/static/chunks/node_modules_next_dist_client_16lnmlo._.js:2774:21)
+    at processMessage (file:///home/jeck/Desktop/porto v2/portofolio-3d/.next/dev/static/chunks/node_modules_next_dist_client_16lnmlo._.js:2835:28)
+    at <unknown> (file:///home/jeck/Desktop/porto v2/portofolio-3d/.next/dev/static/chunks/node_modules_next_dist_client_16lnmlo._.js:2680:13)
+    at WebSocket.handleMessage (file:///home/jeck/Desktop/porto v2/portofolio-3d/.next/dev/static/chunks/node_modules_next_dist_client_16lnmlo._.js:2325:17) (file:///home/jeck/Desktop/porto v2/portofolio-3d/.next/dev/static/chunks/node_modules_next_dist_client_16lnmlo._.js:2774:21)
+[browser] ./src/app/globals.css:1130:8
+Parsing CSS source code failed
+  1128 |   }
+  1129 | }
+> 1130 | @import url('https://fonts.googleapis.com/css2?family=Nunito...
+       |        ^
+  1131 | :root {
+  1132 |   --token-black: #000;
+  1133 |   --token-light-gray: #e1e1e1;
+
+@import rules must precede all rules aside from @charset and @layer statements
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:1130:8
+  1128 |   }
+  1129 | }
+> 1130 | @import url('https://fonts.googleapis.com/css2?family=Nunito...
+       |        ^
+  1131 | :root {
+  1132 |   --token-black: #000;
+  1133 |   --token-light-gray: #e1e1e1;
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component] 
+    at handleErrors (file:///home/jeck/Desktop/porto v2/portofolio-3d/.next/dev/static/chunks/node_modules_next_dist_client_16lnmlo._.js:2774:21)
+    at processMessage (file:///home/jeck/Desktop/porto v2/portofolio-3d/.next/dev/static/chunks/node_modules_next_dist_client_16lnmlo._.js:2835:28)
+    at <unknown> (file:///home/jeck/Desktop/porto v2/portofolio-3d/.next/dev/static/chunks/node_modules_next_dist_client_16lnmlo._.js:2680:13)
+    at WebSocket.handleMessage (file:///home/jeck/Desktop/porto v2/portofolio-3d/.next/dev/static/chunks/node_modules_next_dist_client_16lnmlo._.js:2325:17) (file:///home/jeck/Desktop/porto v2/portofolio-3d/.next/dev/static/chunks/node_modules_next_dist_client_16lnmlo._.js:2774:21)
+[browser] ./src/app/globals.css:1130:8
+Parsing CSS source code failed
+  1128 |   }
+  1129 | }
+> 1130 | @import url('https://fonts.googleapis.com/css2?family=Nunito...
+       |        ^
+  1131 | :root {
+  1132 |   --token-black: #000;
+  1133 |   --token-light-gray: #e1e1e1;
+
+@import rules must precede all rules aside from @charset and @layer statements
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:1130:8
+  1128 |   }
+  1129 | }
+> 1130 | @import url('https://fonts.googleapis.com/css2?family=Nunito...
+       |        ^
+  1131 | :root {
+  1132 |   --token-black: #000;
+  1133 |   --token-light-gray: #e1e1e1;
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component] 
+    at handleErrors (file:///home/jeck/Desktop/porto v2/portofolio-3d/.next/dev/static/chunks/node_modules_next_dist_client_16lnmlo._.js:2774:21)
+    at processMessage (file:///home/jeck/Desktop/porto v2/portofolio-3d/.next/dev/static/chunks/node_modules_next_dist_client_16lnmlo._.js:2835:28)
+    at <unknown> (file:///home/jeck/Desktop/porto v2/portofolio-3d/.next/dev/static/chunks/node_modules_next_dist_client_16lnmlo._.js:2680:13)
+    at WebSocket.handleMessage (file:///home/jeck/Desktop/porto v2/portofolio-3d/.next/dev/static/chunks/node_modules_next_dist_client_16lnmlo._.js:2325:17) (file:///home/jeck/Desktop/porto v2/portofolio-3d/.next/dev/static/chunks/node_modules_next_dist_client_16lnmlo._.js:2774:21)
+[browser] ./src/app/globals.css:1130:8
+Parsing CSS source code failed
+  1128 |   }
+  1129 | }
+> 1130 | @import url('https://fonts.googleapis.com/css2?family=Nunito...
+       |        ^
+  1131 | :root {
+  1132 |   --token-black: #000;
+  1133 |   --token-light-gray: #e1e1e1;
+
+@import rules must precede all rules aside from @charset and @layer statements
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:1130:8
+  1128 |   }
+  1129 | }
+> 1130 | @import url('https://fonts.googleapis.com/css2?family=Nunito...
+       |        ^
+  1131 | :root {
+  1132 |   --token-black: #000;
+  1133 |   --token-light-gray: #e1e1e1;
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component] 
+    at handleErrors (file:///home/jeck/Desktop/porto v2/portofolio-3d/.next/dev/static/chunks/node_modules_next_dist_client_16lnmlo._.js:2774:21)
+    at processMessage (file:///home/jeck/Desktop/porto v2/portofolio-3d/.next/dev/static/chunks/node_modules_next_dist_client_16lnmlo._.js:2835:28)
+    at <unknown> (file:///home/jeck/Desktop/porto v2/portofolio-3d/.next/dev/static/chunks/node_modules_next_dist_client_16lnmlo._.js:2680:13)
+    at WebSocket.handleMessage (file:///home/jeck/Desktop/porto v2/portofolio-3d/.next/dev/static/chunks/node_modules_next_dist_client_16lnmlo._.js:2325:17) (file:///home/jeck/Desktop/porto v2/portofolio-3d/.next/dev/static/chunks/node_modules_next_dist_client_16lnmlo._.js:2774:21)
