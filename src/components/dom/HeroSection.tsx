@@ -7,7 +7,7 @@ import { PERSONAL_INFO } from '@/lib/constants';
 import { fadeInLeft, fadeInRight } from '@/lib/animations';
 
 // Lazy load 3D component
-const Hero3D = dynamic(() => import('@/components/canvas/Hero3D'), {
+const SplineEmbed = dynamic(() => import('@/components/ui/SplineEmbed'), {
   ssr: false,
   loading: () => (
     <div className="w-full h-full flex items-center justify-center">
@@ -75,7 +75,10 @@ export default function HeroSection() {
 
           {/* Right 3D Model */}
           <motion.div {...fadeInRight} className="h-[400px] lg:h-[600px] relative">
-            <Hero3D />
+            <SplineEmbed
+  url="https://prod.spline.design/your-scene-id/scene.splinecode"
+  className="w-full h-full"
+/>
           </motion.div>
         </div>
       </div>
