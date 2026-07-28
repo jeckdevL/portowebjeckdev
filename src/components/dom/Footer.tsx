@@ -16,7 +16,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <h3 className="text-xl font-bold bg-gradient-to-r from-[#00F0FF] to-[#8A2BE2] bg-clip-text text-transparent mb-2">
+            <h3 className="text-xl font-bold bg-gradient-to-r from-[var(--token-accent-yellow)] to-[var(--token-accent-pink)] bg-clip-text text-transparent mb-2">
               {PERSONAL_INFO.shortName}
             </h3>
             <p className="text-gray-400 text-sm">
@@ -36,7 +36,7 @@ export default function Footer() {
                       e.preventDefault();
                       scrollTo(link.href);
                     }}
-                    className="text-gray-400 hover:text-[#00F0FF] transition-colors text-sm"
+                    className="text-gray-400 hover:text-[var(--token-accent-yellow)] transition-colors text-sm"
                   >
                     {link.label}
                   </a>

@@ -11,7 +11,7 @@ const Hero3D = dynamic(() => import('@/components/canvas/Hero3D'), {
   ssr: false,
   loading: () => (
     <div className="w-full h-full flex items-center justify-center">
-      <div className="w-16 h-16 border-4 border-[#00F0FF] border-t-transparent rounded-full animate-spin" />
+      <div className="w-16 h-16 border-4 border-[var(--token-accent-yellow)] border-t-transparent rounded-full animate-spin" />
     </div>
   ),
 });
@@ -32,7 +32,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-[#00F0FF] font-mono text-sm mb-4"
+              className="text-[var(--token-accent-yellow)] font-mono text-sm mb-4"
             >
               Hi, I&apos;m
             </motion.p>
@@ -43,7 +43,7 @@ export default function HeroSection() {
               className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6"
             >
               {PERSONAL_INFO.shortName}
-              <span className="block bg-gradient-to-r from-[#00F0FF] to-[#8A2BE2] bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-[var(--token-accent-yellow)] to-[var(--token-accent-pink)] bg-clip-text text-transparent">
                 Fullstack Developer
               </span>
             </motion.h1>

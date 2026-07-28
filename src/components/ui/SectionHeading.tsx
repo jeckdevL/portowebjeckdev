@@ -17,7 +17,7 @@ export default function SectionHeading({ title, subtitle }: SectionHeadingProps)
       {subtitle && (
         <p className="text-gray-400 text-lg max-w-2xl mx-auto">{subtitle}</p>
       )}
-      <div className="mt-6 mx-auto w-24 h-1 bg-gradient-to-r from-[#00F0FF] to-[#8A2BE2] rounded-full" />
+      <div className="mt-6 mx-auto w-24 h-1 bg-gradient-to-r from-[var(--token-accent-yellow)] to-[var(--token-accent-pink)] rounded-full" />
     </motion.div>
   );
 }

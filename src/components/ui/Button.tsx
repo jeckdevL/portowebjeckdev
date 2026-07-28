@@ -25,11 +25,11 @@ export default function Button({
 
   const variants = {
     primary:
-      'bg-gradient-to-r from-[#00F0FF] to-[#8A2BE2] text-black hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105',
+      'bg-black text-light-gray hover:bg-light-gray hover:text-black',
     secondary:
       'bg-white/10 text-white backdrop-blur-sm border border-white/20 hover:bg-white/20',
     outline:
-      'border border-[#00F0FF] text-[#00F0FF] hover:bg-[#00F0FF]/10',
+      'border border-light-gray text-light-gray hover:bg-light-gray/10',
   };
 
   const classes = cn(baseStyle, variants[variant], className);

@@ -109,7 +109,7 @@ export default function AboutSection() {
                     whileInView={{ width: `${skill.level}%` }}
                     viewport={{ once: true }}
                     transition={{ duration: 1, delay: 0.2 }}
-                    className="h-full bg-gradient-to-r from-[#00F0FF] to-[#8A2BE2] rounded-full"
+                    className="h-full bg-gradient-to-r from-[var(--token-accent-yellow)] to-[var(--token-accent-pink)] rounded-full"
                   />
                 </div>
               </motion.div>

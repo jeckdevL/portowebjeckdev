@@ -65,7 +65,7 @@ export default function Navbar() {
               href={PERSONAL_INFO.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 bg-gradient-to-r from-[#00F0FF] to-[#8A2BE2] text-black rounded-lg font-semibold text-sm hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
+              className="px-4 py-2 bg-gradient-to-r from-[var(--token-accent-yellow)] to-[var(--token-accent-pink)] text-black rounded-lg font-semibold text-sm hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
             >
               Hire Me
             </a>
@@ -106,7 +106,7 @@ export default function Navbar() {
                     e.preventDefault();
                     scrollTo(link.href);
                   }}
-                  className="block text-gray-300 hover:text-[#00F0FF] transition-colors py-2"
+                  className="block text-gray-300 hover:text-[var(--token-accent-yellow)] transition-colors py-2"
                 >
                   {link.label}
                 </a>
@@ -115,7 +115,7 @@ export default function Navbar() {
                 href={PERSONAL_INFO.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block text-center px-4 py-3 bg-gradient-to-r from-[#00F0FF] to-[#8A2BE2] text-black rounded-lg font-semibold"
+                className="block text-center px-4 py-3 bg-gradient-to-r from-[var(--token-accent-yellow)] to-[var(--token-accent-pink)] text-black rounded-lg font-semibold"
               >
                 Hire Me
               </a>

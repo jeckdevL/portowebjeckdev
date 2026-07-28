@@ -99,7 +99,7 @@ export default function MagneticButton({
         >
         {/* Animated background */}
         <motion.div
-          className="absolute inset-0 bg-gradient-to-r from-[#00F0FF] to-[#8A2BE2]"
+          className="absolute inset-0 bg-gradient-to-r from-[var(--token-accent-yellow)] to-[var(--token-accent-pink)]"
           initial={{ scale: 0, opacity: 0 }}
           whileHover={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.3 }}
@@ -118,7 +118,7 @@ export default function MagneticButton({
             transition: { duration: 0.6 },
           }}
           style={{
-            background: 'radial-gradient(circle, rgba(0,240,255,0.4) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(255,215,0,0.4) 0%, transparent 70%)',
           }}
         />
         </motion.a>
@@ -131,7 +131,7 @@ export default function MagneticButton({
         >
           {/* Animated background */}
           <motion.div
-            className="absolute inset-0 bg-gradient-to-r from-[#00F0FF] to-[#8A2BE2]"
+            className="absolute inset-0 bg-gradient-to-r from-[var(--token-accent-yellow)] to-[var(--token-accent-pink)]"
             initial={{ scale: 0, opacity: 0 }}
             whileHover={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.3 }}
@@ -150,7 +150,7 @@ export default function MagneticButton({
               transition: { duration: 0.6 },
             }}
             style={{
-              background: 'radial-gradient(circle, rgba(0,240,255,0.4) 0%, transparent 70%)',
+              background: 'radial-gradient(circle, rgba(255,215,0,0.4) 0%, transparent 70%)',
             }}
           />
         </motion.button>
