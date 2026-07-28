@@ -40,7 +40,7 @@ export default function AboutSection() {
                  transition={{ duration: 3, repeat: Infinity }}
                  className="w-64 h-64 rounded-3xl bg-gradient-to-br from-[#00F0FF] to-[#8A2BE2] p-[3px] mx-auto lg:mx-0"
                >
-                 <div className="w-full h-full rounded-3xl bg-[#0A0A0A] overflow-hidden">
+                 <div className="w-full h-full rounded-3xl bg-transparent overflow-hidden">
                    <Image
                      src="/profile.jpg"
                      alt={PERSONAL_INFO.shortName}
