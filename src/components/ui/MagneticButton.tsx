@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { motion, useSpring } from 'framer-motion';
 
 interface MagneticButtonProps {
@@ -22,9 +22,14 @@ export default function MagneticButton({
 }: MagneticButtonProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   const x = useSpring(0, { stiffness: 150, damping: 15 });
   const y = useSpring(0, { stiffness: 150, damping: 15 });
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!ref.current) return;
@@ -48,7 +53,30 @@ export default function MagneticButton({
     y.set(0);
   };
 
-  const Component = href ? motion.a : motion.button;
+  // Render simple version on server, enhanced version on client
+  if (!mounted) {
+    if (href) {
+      return (
+        <a
+          href={href}
+          target={target}
+          rel={rel}
+          onClick={onClick}
+          className={`relative inline-flex items-center justify-center gap-2 px-6 py-3 font-semibold rounded-lg ${className}`}
+        >
+          {children}
+        </a>
+      );
+    }
+    return (
+      <button
+        onClick={onClick}
+        className={`relative inline-flex items-center justify-center gap-2 px-6 py-3 font-semibold rounded-lg ${className}`}
+      >
+        {children}
+      </button>
+    );
+  }
 
   return (
     <motion.div
@@ -59,15 +87,16 @@ export default function MagneticButton({
       style={{ x, y }}
       className="inline-block"
     >
-      <Component
-        href={href}
-        target={target}
-        rel={rel}
-        onClick={onClick}
-        className={`relative inline-flex items-center justify-center gap-2 px-6 py-3 font-semibold rounded-lg overflow-hidden group ${className}`}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-      >
+      {href ? (
+        <motion.a
+          href={href}
+          target={target}
+          rel={rel}
+          onClick={onClick}
+          className={`relative inline-flex items-center justify-center gap-2 px-6 py-3 font-semibold rounded-lg overflow-hidden group ${className}`}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
         {/* Animated background */}
         <motion.div
           className="absolute inset-0 bg-gradient-to-r from-[#00F0FF] to-[#8A2BE2]"
@@ -92,7 +121,40 @@ export default function MagneticButton({
             background: 'radial-gradient(circle, rgba(0,240,255,0.4) 0%, transparent 70%)',
           }}
         />
-      </Component>
+        </motion.a>
+      ) : (
+        <motion.button
+          onClick={onClick}
+          className={`relative inline-flex items-center justify-center gap-2 px-6 py-3 font-semibold rounded-lg overflow-hidden group ${className}`}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          {/* Animated background */}
+          <motion.div
+            className="absolute inset-0 bg-gradient-to-r from-[#00F0FF] to-[#8A2BE2]"
+            initial={{ scale: 0, opacity: 0 }}
+            whileHover={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.3 }}
+          />
+
+          {/* Button content */}
+          <span className="relative z-10">{children}</span>
+
+          {/* Ripple effect on hover */}
+          <motion.div
+            className="absolute inset-0 rounded-lg"
+            initial={{ scale: 0, opacity: 0.5 }}
+            whileHover={{
+              scale: 2,
+              opacity: 0,
+              transition: { duration: 0.6 },
+            }}
+            style={{
+              background: 'radial-gradient(circle, rgba(0,240,255,0.4) 0%, transparent 70%)',
+            }}
+          />
+        </motion.button>
+      )}
     </motion.div>
   );
 }
