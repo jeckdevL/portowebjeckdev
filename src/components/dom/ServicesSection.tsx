@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import SectionHeading from '@/components/ui/SectionHeading';
+import InteractiveCard from '@/components/ui/InteractiveCard';
 import { services } from '@/data/services';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
 
@@ -19,10 +20,10 @@ export default function ServicesSection() {
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {services.map((service, index) => (
+            <InteractiveCard key={service.id} className="h-full">
             <motion.div
-              key={service.id}
               {...fadeInUp}
-              className="relative group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:border-[#00F0FF]/30 transition-all duration-500"
+              className="relative group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:border-[#00F0FF]/30 transition-all duration-500 h-full"
             >
               {/* Icon */}
               <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[#00F0FF]/20 to-[#8A2BE2]/20 flex items-center justify-center mb-6">
@@ -66,6 +67,7 @@ export default function ServicesSection() {
                 </a>
               </div>
             </motion.div>
+            </InteractiveCard>
           ))}
         </motion.div>
       </div>

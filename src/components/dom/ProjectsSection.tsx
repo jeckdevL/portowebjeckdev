@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import SectionHeading from '@/components/ui/SectionHeading';
+import InteractiveCard from '@/components/ui/InteractiveCard';
 import { projects } from '@/data/projects';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
 
@@ -19,11 +20,10 @@ export default function ProjectsSection() {
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {projects.map((project) => (
+            <InteractiveCard key={project.id} className="h-full">
              <motion.div
-               key={project.id}
                {...fadeInUp}
-               whileHover={{ y: -8, scale: 1.02 }}
-               className="group relative bg-gradient-to-br from-white/8 to-white/5 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden hover:border-[#00F0FF]/50 transition-all duration-500 shadow-lg hover:shadow-[0_0_30px_rgba(0,240,255,0.2)]"
+               className="group relative bg-gradient-to-br from-white/8 to-white/5 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden hover:border-[#00F0FF]/50 transition-all duration-500 shadow-lg hover:shadow-[0_0_30px_rgba(0,240,255,0.2)] h-full"
              >
                {/* Image placeholder with gradient */}
                <div className="relative h-56 bg-gradient-to-br from-[#00F0FF]/30 to-[#8A2BE2]/20 overflow-hidden group-hover:from-[#00F0FF]/40 group-hover:to-[#8A2BE2]/30 transition-all duration-500">
@@ -84,9 +84,10 @@ export default function ProjectsSection() {
                      Repository
                    </motion.a>
                  </div>
-              </div>
-            </motion.div>
-          ))}
+               </div>
+             </motion.div>
+            </InteractiveCard>
+           ))}
         </motion.div>
       </div>
     </section>

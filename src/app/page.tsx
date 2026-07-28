@@ -5,15 +5,19 @@ import AboutSection from '@/components/dom/AboutSection';
 import ProjectsSection from '@/components/dom/ProjectsSection';
 import ServicesSection from '@/components/dom/ServicesSection';
 import ContactSection from '@/components/dom/ContactSection';
+import AnimatedBackground from '@/components/ui/AnimatedBackground';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
-      <HeroSection />
-      <AboutSection />
-      <ProjectsSection />
-      <ServicesSection />
-      <ContactSection />
-    </main>
+    <>
+      <AnimatedBackground />
+      <main className="relative z-10 flex min-h-screen flex-col items-center justify-between">
+        <HeroSection />
+        <AboutSection />
+        <ProjectsSection />
+        <ServicesSection />
+        <ContactSection />
+      </main>
+    </>
   );
 }
