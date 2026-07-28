@@ -8,7 +8,7 @@ import { fadeInUp, staggerContainer } from '@/lib/animations';
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-[#050814]">
+    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <SectionHeading
           title="Featured Projects"
