@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "@/components/dom/Navbar";
+import FigmaParallaxCard from "@/components/ui/FigmaParallaxCard";
 import Footer from "@/components/dom/Footer";
 import "./globals.css";
 
@@ -21,19 +22,24 @@ export const metadata: Metadata = {
   authors: [{ name: "Muhammad Isman Dzaky Ramadhian" }],
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+export default function RootLayout({ children }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <html
-      lang="id"
+      lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
     >
       <body className="min-h-full flex flex-col">
         <Navbar />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1">
+  {children}
+  <FigmaParallaxCard
+    image="/models/placeholder.txt"
+    title="Figma Parallax"
+    description="Demo card from Figma"
+  />
+</main>
         <Footer />
       </body>
     </html>

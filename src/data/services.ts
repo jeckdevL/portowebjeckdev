@@ -4,7 +4,7 @@ export const services: Service[] = [
   {
     id: '1',
     name: 'Fullstack Web App',
-    price_range: 'Mulai dari Rp 5.000.000',
+    price_range: 'Starting from Rp 5,000,000',
     features: [
       'Frontend + Backend Development',
       'Database Design & Integration',
@@ -16,7 +16,7 @@ export const services: Service[] = [
   {
     id: '2',
     name: 'Landing Page 3D',
-    price_range: 'Mulai dari Rp 3.000.000',
+    price_range: 'Starting from Rp 3,000,000',
     features: [
       '3D Interactive Elements',
       'Smooth Animations',
@@ -28,7 +28,7 @@ export const services: Service[] = [
   {
     id: '3',
     name: 'API Development',
-    price_range: 'Mulai dari Rp 2.000.000',
+    price_range: 'Starting from Rp 2,000,000',
     features: [
       'RESTful API Design',
       'Authentication & Authorization',

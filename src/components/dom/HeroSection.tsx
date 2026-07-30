@@ -76,7 +76,7 @@ export default function HeroSection() {
           {/* Right 3D Model */}
           <motion.div {...fadeInRight} className="h-[400px] lg:h-[600px] relative">
             <SplineEmbed
-  url="https://prod.spline.design/your-scene-id/scene.splinecode"
+  url="https://prod.spline.design/8bR8g7P1yMcg9VQVtJ0v3K2o/scene.splinecode"
   className="w-full h-full"
 />
           </motion.div>

@@ -93,20 +93,20 @@ export default function MagneticButton({
           target={target}
           rel={rel}
           onClick={onClick}
-          className={`relative inline-flex items-center justify-center gap-2 px-6 py-3 font-semibold rounded-lg overflow-hidden group ${className}`}
+          className={`relative inline-flex items-center justify-center gap-2 px-6 py-3 font-bold uppercase tracking-widest clip-path-r6 overflow-hidden group bg-black/90 backdrop-blur-sm text-white border border-[#00F0FF]/30 hover:bg-[#00F0FF]/10 transition-all duration-300 shadow-[0_0_15px_rgba(0,240,255,0.2)] ${className}`}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
         {/* Animated background */}
         <motion.div
-          className="absolute inset-0 bg-white rounded-lg"
+          className="absolute inset-0 bg-[#00F0FF]/10 rounded-lg"
           initial={{ scale: 0, opacity: 0 }}
           whileHover={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.3 }}
         />
 
         {/* Button content */}
-        <span className="relative z-10 text-black">{children}</span>
+        <span className="relative z-10 text-white">{children}</span>
 
         {/* Ripple effect on hover */}
         <motion.div
@@ -118,27 +118,27 @@ export default function MagneticButton({
             transition: { duration: 0.6 },
           }}
           style={{
-            background: 'radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(0,240,255,0.3) 0%, transparent 70%)',
           }}
         />
         </motion.a>
       ) : (
         <motion.button
           onClick={onClick}
-          className={`relative inline-flex items-center justify-center gap-2 px-6 py-3 font-semibold rounded-lg overflow-hidden group ${className}`}
+          className={`relative inline-flex items-center justify-center gap-2 px-6 py-3 font-bold uppercase tracking-widest clip-path-r6 overflow-hidden group bg-black/90 backdrop-blur-sm text-white border border-[#00F0FF]/30 hover:bg-[#00F0FF]/10 transition-all duration-300 shadow-[0_0_15px_rgba(0,240,255,0.2)] ${className}`}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
           {/* Animated background */}
           <motion.div
-            className="absolute inset-0 bg-white rounded-lg"
+            className="absolute inset-0 bg-[#00F0FF]/10 rounded-lg"
             initial={{ scale: 0, opacity: 0 }}
             whileHover={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.3 }}
           />
 
           {/* Button content */}
-          <span className="relative z-10 text-black">{children}</span>
+          <span className="relative z-10 text-white">{children}</span>
 
           {/* Ripple effect on hover */}
           <motion.div
@@ -150,7 +150,7 @@ export default function MagneticButton({
               transition: { duration: 0.6 },
             }}
             style={{
-              background: 'radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%)',
+              background: 'radial-gradient(circle, rgba(0,240,255,0.3) 0%, transparent 70%)',
             }}
           />
         </motion.button>

@@ -12,7 +12,6 @@ export default function ServicesSection() {
       <div className="max-w-7xl mx-auto">
         <SectionHeading
           title="My Services"
-          subtitle="Layanan yang saya tawarkan untuk membantu project Anda"
         />
 
         <motion.div
@@ -58,12 +57,12 @@ export default function ServicesSection() {
 
               <div className="mt-8 pt-6 border-t border-white/10">
                 <a
-                  href="https://wa.me/6281513186174?text=Halo%20Isman%2C%20saya%20tertarik%20dengan%20layanan%20Anda"
+                  href="https://wa.me/6281513186174?text=Hi%20Isman%2C%20I'm%20interested%20in%20your%20services"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block text-center px-4 py-3 bg-gradient-to-r from-[var(--token-accent-yellow)] to-[var(--token-accent-pink)] text-black rounded-lg font-semibold text-sm hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
                 >
-                  Pesan Sekarang
+                  Order Now
                 </a>
               </div>
             </motion.div>

@@ -1,4 +1,4 @@
-// Animasi variants untuk Framer Motion
+// Animation variants for Framer Motion
 export const fadeInUp = {
   initial: { opacity: 0, y: 60 },
   whileInView: { opacity: 1, y: 0 },

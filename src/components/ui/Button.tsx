@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 interface ButtonProps {
   children: ReactNode;
-  variant?: 'primary' | 'secondary' | 'outline';
+  variant?: 'primary' | 'secondary' | 'outline' | 'extraction';
   size?: 'sm' | 'md' | 'lg';
   className?: string;
   onClick?: () => void;
@@ -37,9 +37,10 @@ export default function Button({
   };
 
   const variantStyles = {
-    primary: 'bg-white text-black hover:bg-white/90 disabled:bg-white/50',
-    secondary: 'bg-transparent text-white border border-white/20 hover:bg-white hover:text-black hover:border-white disabled:opacity-50',
+    primary: 'bg-[#00F0FF] text-black font-bold uppercase tracking-widest clip-path-r6 hover:bg-white transition-all duration-200',
+    secondary: 'bg-transparent text-[#00F0FF] border-2 border-[#00F0FF] hover:bg-[#00F0FF] hover:text-black uppercase tracking-widest clip-path-r6',
     outline: 'border border-white/30 text-white hover:bg-white/5 disabled:opacity-50',
+    extraction: 'bg-black/90 backdrop-blur-sm text-white font-bold uppercase tracking-widest clip-path-r6 border border-[#00F0FF]/30 hover:bg-[#00F0FF]/10 transition-all duration-300 shadow-[0_0_15px_rgba(0,240,255,0.2)]',
   };
 
   const combinedStyles = `${baseStyles} ${sizeStyles[size]} ${variantStyles[variant]} ${className}`;

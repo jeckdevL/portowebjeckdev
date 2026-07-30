@@ -5,24 +5,24 @@ export async function POST(request: Request) {
     const body = await request.json();
     const { name, email, message } = body;
 
-    // Validasi input
+    // Validate input
     if (!name || !email || !message) {
       return NextResponse.json(
-        { error: 'Semua field wajib diisi' },
+        { error: 'All fields are required' },
         { status: 400 }
       );
     }
 
-    // Di sini Anda bisa menambahkan logika untuk:
-    // - Mengirim email menggunakan layanan seperti SendGrid, Mailgun, atau nodemailer
-    // - Menyimpan ke database
-    // - Mengirim notifikasi ke WhatsApp
+    // Here you can add logic for:
+    // - Sending email using services like SendGrid, Mailgun, or nodemailer
+    // - Saving to database
+    // - Sending WhatsApp notifications
     
-    // Contoh: Log ke console (untuk development)
+    // Example: Log to console (for development)
     console.log('Contact Form Submission:', { name, email, message });
 
-    // Untuk production, Anda bisa integrasikan dengan layanan email
-    // Contoh dengan Formspree (gratis untuk memulai):
+    // For production, you can integrate with email services
+    // Example with Formspree (free to start):
     // const formspreeRes = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
     //   method: 'POST',
     //   headers: { 'Content-Type': 'application/json' },
@@ -30,13 +30,13 @@ export async function POST(request: Request) {
     // });
 
     return NextResponse.json(
-      { success: true, message: 'Pesan berhasil dikirim!' },
+      { success: true, message: 'Message sent successfully!' },
       { status: 200 }
     );
   } catch (error) {
     console.error('Contact form error:', error);
     return NextResponse.json(
-      { error: 'Terjadi kesalahan. Silakan coba lagi.' },
+      { error: 'An error occurred. Please try again.' },
       { status: 500 }
     );
   }

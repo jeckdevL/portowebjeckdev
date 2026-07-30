@@ -5,7 +5,7 @@ export const projects: Project[] = [
     id: '1',
     title: 'E-Commerce Platform',
     description:
-      'Sebuah platform e-commerce modern dengan fitur real-time inventory, payment gateway, dan dashboard admin. Dibangun dengan performa tinggi dan SEO optimal.',
+      'A modern e-commerce platform with real-time inventory, payment gateway, and admin dashboard. Built with high performance and optimal SEO.',
     tech_stack: ['Next.js', 'TypeScript', 'PostgreSQL', 'Stripe'],
     image_url: '/images/ecommerce.jpg',
     live_link: 'https://example.com',
@@ -14,9 +14,9 @@ export const projects: Project[] = [
   },
   {
     id: '2',
-    title: 'Landing Page 3D Interaktif',
+    title: 'Interactive 3D Landing Page',
     description:
-      'Landing page futuristik dengan elemen 3D interaktif menggunakan Three.js. Objek 3D merespon gerakan mouse dan memiliki animasi yang halus.',
+      'A futuristic landing page with interactive 3D elements using Three.js. 3D objects respond to mouse movement with smooth animations.',
     tech_stack: ['React', 'Three.js', 'Framer Motion', 'Tailwind CSS'],
     image_url: '/images/landing3d.jpg',
     live_link: 'https://example.com',
@@ -25,9 +25,9 @@ export const projects: Project[] = [
   },
   {
     id: '3',
-    title: 'Sistem Manajemen Inventaris',
+    title: 'Inventory Management System',
     description:
-      'Aplikasi fullstack untuk manajemen inventaris barang dengan fitur CRUD, export laporan, dan autentikasi multi-level.',
+      'A fullstack application for goods inventory management with CRUD features, report export, and multi-level authentication.',
     tech_stack: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS'],
     image_url: '/images/inventory.jpg',
     live_link: 'https://example.com',

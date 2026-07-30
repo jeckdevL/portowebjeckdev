@@ -1,8 +1,8 @@
-// Informasi pribadi sesuai PRD.md
+// Personal information according to PRD.md
 export const PERSONAL_INFO = {
   name: 'Muhammad Isman Dzaky Ramadhian',
   shortName: 'Isman Dzaky',
-  status: 'Mahasiswa & Freelance Fullstack Developer',
+  status: 'Student & Freelance Fullstack Developer',
   email: 'isman.dzaky14@gmail.com',
   phone: '+6281513186174',
   whatsapp: 'https://wa.me/6281513186174',
@@ -10,7 +10,7 @@ export const PERSONAL_INFO = {
   linkedin: 'https://linkedin.com/in/ismandzaky',
 };
 
-// Design tokens sesuai Design.md
+// Design tokens according to Design.md
 export const COLORS = {
   background: '#0A0A0A',
   backgroundAlt: '#050814',

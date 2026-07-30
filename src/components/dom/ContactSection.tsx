@@ -45,7 +45,7 @@ export default function ContactSection() {
       <div className="max-w-7xl mx-auto">
         <SectionHeading
           title="Get In Touch"
-          subtitle="Ada project yang ingin didiskusikan? Yuk ngobrol!"
+          // subtitle removed
         />
 
         <div className="grid lg:grid-cols-2 gap-12">
@@ -56,8 +56,8 @@ export default function ContactSection() {
                 Let's work together
               </h3>
               <p className="text-gray-400">
-                Saya selalu terbuka untuk diskusi tentang project baru, ide kreatif, atau
-                kesempatan untuk membantu Anda membangun sesuatu yang luar biasa.
+                I'm always open to discussing new projects, creative ideas, or
+                opportunities to help you build something extraordinary.
               </p>
             </div>
 
@@ -172,7 +172,7 @@ export default function ContactSection() {
                   placeholder="Tell me about your project..."
                 />
               </div>
-              <Button type="submit" variant="primary" className="w-full">
+              <Button type="submit" variant="extraction" className="w-full">
                 {status === 'sending' ? (
                   <span className="flex items-center gap-2">
                     <svg className="animate-spin h-4 w-4" viewBox="0 0 24 24" fill="none">
