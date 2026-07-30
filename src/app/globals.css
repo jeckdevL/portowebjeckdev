@@ -6,9 +6,19 @@
 
 :root {
   --background: #000000;
-  --foreground: #ffffff;
-  --font-sans: 'Georgia, Cambria, "Times New Roman", Times, serif';
-  --font-mono: var(--font-geist-mono);
+  --foreground: #1a1a1a;
+  --border-subtle: #0d0d0d;
+  --border-medium: #1a1a1a;
+  --border-strong: #262626;
+  --token-black: #000000;
+  --token-white: #e5e5e5;
+  --token-light-gray: #a3a3a3;
+  --token-mid-gray: #737373;
+  --token-off-white: #d4d4d4;
+  --background-elevated: #050505;
+  --foreground-muted: #525252;
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
 }
 
 @theme inline {
@@ -20,8 +30,8 @@
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
+  color: var(--token-white);
+  font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
