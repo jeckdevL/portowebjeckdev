@@ -22,13 +22,14 @@ export default function HeroModel() {
     if (groupRef.current) {
       // Smooth rotation based on mouse movement
       groupRef.current.rotation.x +=
-        (mousePosition.current.y * 0.3 - groupRef.current.rotation.x) * 0.05;
+        (mousePosition.current.y * 0.3 - groupRef.current.rotation.x) * 0.03;
       groupRef.current.rotation.y +=
-        (mousePosition.current.x * 0.3 - groupRef.current.rotation.y) * 0.05;
+        (mousePosition.current.x * 0.3 - groupRef.current.rotation.y) * 0.03;
       
-      // Continuous slow rotation
-      groupRef.current.rotation.y += 0.005;
-      groupRef.current.rotation.x += 0.002;
+      // Continuous auto rotation
+      groupRef.current.rotation.y += 0.01;
+      groupRef.current.rotation.x += 0.004;
+      groupRef.current.rotation.z += 0.002;
     }
   });
 

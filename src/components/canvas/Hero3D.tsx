@@ -5,6 +5,8 @@ import { Environment } from '@react-three/drei';
 import ThreeCanvas from './ThreeCanvas';
 import HeroModel from './HeroModel';
 import SceneEffects from './SceneEffects';
+import ScrollBar3D from './ScrollBar3D';
+import Navbar3D from './Navbar3D';
 
 export default function Hero3D() {
   return (
@@ -16,6 +18,8 @@ export default function Hero3D() {
       <Suspense fallback={null}>
         <HeroModel />
         <SceneEffects />
+        <ScrollBar3D />
+        <Navbar3D />
       </Suspense>
     </ThreeCanvas>
   );
