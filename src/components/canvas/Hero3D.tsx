@@ -3,7 +3,7 @@
 import { Suspense } from 'react';
 import { Environment } from '@react-three/drei';
 import ThreeCanvas from './ThreeCanvas';
-import HeroModel from './HeroModel';
+import HeroCube from './HeroCube';
 import SceneEffects from './SceneEffects';
 import ScrollBar3D from './ScrollBar3D';
 import Navbar3D from './Navbar3D';
@@ -16,7 +16,7 @@ export default function Hero3D() {
       <directionalLight position={[-10, -10, -10]} intensity={0.5} color="#ffffff" />
       <Environment preset="city" />
       <Suspense fallback={null}>
-        <HeroModel />
+        <HeroCube />
         <SceneEffects />
         <ScrollBar3D />
         <Navbar3D />

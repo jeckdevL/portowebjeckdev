@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic';
 import MagneticButton from '@/components/ui/MagneticButton';
 import { PERSONAL_INFO } from '@/lib/constants';
 import { fadeInLeft, fadeInRight } from '@/lib/animations';
+import Hero3D from '../canvas/Hero3D';
 
 // Lazy load 3D component
 const SplineEmbed = dynamic(() => import('@/components/ui/SplineEmbed'), {
@@ -42,43 +43,46 @@ export default function HeroSection() {
              >
                {PERSONAL_INFO.shortName}
              </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className="text-white/60 text-lg mb-10 max-w-lg mx-auto lg:mx-0 leading-relaxed"
-            >
-              {PERSONAL_INFO.status}. Creating digital experiences with modern technologies and clean design.
-            </motion.p>
+             <motion.p
+               initial={{ opacity: 0, y: 20 }}
+               animate={{ opacity: 1, y: 0 }}
+               transition={{ delay: 0.4 }}
+               className="text-white/60 text-lg mb-10 max-w-lg mx-auto lg:mx-0 leading-relaxed"
+             >
+               Building Modern, Fast, and Scalable Digital Solutions.
+             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
               className="flex flex-wrap gap-4 justify-center lg:justify-start"
             >
-               <MagneticButton 
-                 href={PERSONAL_INFO.whatsapp}
-                 target="_blank"
-                 rel="noopener noreferrer"
-                 className="bg-white text-black hover:bg-white/90 rounded-full px-8 py-4 text-sm font-medium"
-               >
-                 Let's Talk
-               </MagneticButton>
-               <MagneticButton 
-                 href="#projects"
-                 className="border border-white/10 text-white hover:border-white/30 rounded-full px-8 py-4 text-sm font-medium transition-all duration-300"
-               >
-                 View Work
-               </MagneticButton>
+                <MagneticButton 
+                  href={PERSONAL_INFO.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white text-black hover:bg-white/90 rounded-full px-8 py-4 text-sm font-medium"
+                >
+                  Let's Talk
+                </MagneticButton>
+                <a
+                  href="/resume.pdf"
+                  className="border border-white/10 text-white hover:border-white/30 rounded-full px-8 py-4 text-sm font-medium transition-all duration-300 flex items-center justify-center"
+                >
+                  Download CV
+                </a>
+                <MagneticButton 
+                  href="#projects"
+                  className="border border-white/10 text-white hover:border-white/30 rounded-full px-8 py-4 text-sm font-medium transition-all duration-300"
+                >
+                  View Work
+                </MagneticButton>
             </motion.div>
           </motion.div>
 
           {/* Right 3D Model */}
           <motion.div {...fadeInRight} className="h-[400px] lg:h-[600px] relative">
-            <SplineEmbed
-  url="https://prod.spline.design/8bR8g7P1yMcg9VQVtJ0v3K2o/scene.splinecode"
-  className="w-full h-full"
-/>
+            <Hero3D />
           </motion.div>
         </div>
       </div>
