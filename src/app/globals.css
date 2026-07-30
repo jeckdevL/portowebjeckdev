@@ -5,36 +5,16 @@
 
 
 :root {
-  /* Bento Portfolio color scheme - Minimalist & Elegant */
-  --token-black: #0a0a0a;
-  --token-dark-gray: #1a1a1a;
-  --token-mid-gray: #666666;
-  --token-light-gray: #999999;
-  --token-white: #ffffff;
-  --token-off-white: #f5f5f5;
-  
-  /* Subtle accent for highlights */
-  --token-accent: #ffffff;
-  --token-accent-subtle: rgba(255, 255, 255, 0.1);
-  
-  /* Semantic colors */
-  --background: #0a0a0a;
-  --background-elevated: #1a1a1a;
+  --background: #000000;
   --foreground: #ffffff;
-  --foreground-muted: rgba(255, 255, 255, 0.7);
-  --foreground-subtle: rgba(255, 255, 255, 0.5);
-  --foreground-faint: rgba(255, 255, 255, 0.2);
-  
-  /* Border colors */
-  --border-subtle: rgba(255, 255, 255, 0.1);
-  --border-medium: rgba(255, 255, 255, 0.2);
-  --border-strong: rgba(255, 255, 255, 0.3);
+  --font-sans: 'Georgia, Cambria, "Times New Roman", Times, serif';
+  --font-mono: var(--font-geist-mono);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: 'Nunito Sans', Arial, Helvetica, sans-serif;
+  --font-sans: 'Georgia, Cambria, "Times New Roman", Times, serif';
   --font-mono: var(--font-geist-mono);
 }
 

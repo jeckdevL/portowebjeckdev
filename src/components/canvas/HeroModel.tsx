@@ -2,12 +2,11 @@
 
 import { useRef, useMemo } from 'react';
 import { useFrame } from '@react-three/fiber';
-import { Float, MeshDistortMaterial } from '@react-three/drei';
+import { Float } from '@react-three/drei';
 import * as THREE from 'three';
 
 export default function HeroModel() {
-  const meshRef = useRef<THREE.Mesh>(null);
-  const ringRef = useRef<THREE.Mesh>(null);
+  const groupRef = useRef<THREE.Group>(null);
   const mousePosition = useRef({ x: 0, y: 0 });
 
   if (typeof window !== 'undefined') {
@@ -20,62 +19,53 @@ export default function HeroModel() {
   }
 
   useFrame((state) => {
-    if (meshRef.current) {
-      meshRef.current.rotation.x +=
-        (mousePosition.current.y * 0.5 - meshRef.current.rotation.x) * 0.05;
-      meshRef.current.rotation.y +=
-        (mousePosition.current.x * 0.5 - meshRef.current.rotation.y) * 0.05;
-      meshRef.current.position.y = Math.sin(state.clock.elapsedTime * 0.5) * 0.2;
-    }
-    if (ringRef.current) {
-      ringRef.current.rotation.z = state.clock.elapsedTime * 0.3;
+    if (groupRef.current) {
+      // Smooth rotation based on mouse movement
+      groupRef.current.rotation.x +=
+        (mousePosition.current.y * 0.3 - groupRef.current.rotation.x) * 0.05;
+      groupRef.current.rotation.y +=
+        (mousePosition.current.x * 0.3 - groupRef.current.rotation.y) * 0.05;
+      
+      // Continuous slow rotation
+      groupRef.current.rotation.y += 0.005;
+      groupRef.current.rotation.x += 0.002;
     }
   });
 
-  const geometry = useMemo(() => new THREE.TorusKnotGeometry(1, 0.35, 128, 16), []);
-  const particleGeo = useMemo(() => {
-    const count = 200;
-    const positions = new Float32Array(count * 3);
-    for (let i = 0; i < count; i++) {
-      const theta = Math.random() * Math.PI * 2;
-      const phi = Math.acos(2 * Math.random() - 1);
-      const r = 2.2 + Math.random() * 0.5;
-      positions[i * 3] = r * Math.sin(phi) * Math.cos(theta);
-      positions[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta);
-      positions[i * 3 + 2] = r * Math.cos(phi);
+  // Create a 3x3x3 grid of cubes
+  const size = 3;
+  const spacing = 1.05;
+  const cuboids = useMemo(() => {
+    const items = [];
+    for (let x = 0; x < size; x++) {
+      for (let y = 0; y < size; y++) {
+        for (let z = 0; z < size; z++) {
+          const posX = (x - (size - 1) / 2) * spacing;
+          const posY = (y - (size - 1) / 2) * spacing;
+          const posZ = (z - (size - 1) / 2) * spacing;
+
+          items.push(
+            <mesh key={`${x}-${y}-${z}`} position={[posX, posY, posZ]} castShadow receiveShadow>
+              <boxGeometry args={[0.96, 0.96, 0.96]} />
+              <meshStandardMaterial
+                color="#0a0a0a"
+                roughness={0.15}
+                metalness={0.9}
+                envMapIntensity={1}
+              />
+            </mesh>
+          );
+        }
+      }
     }
-    return new THREE.BufferGeometry().setAttribute('position', new THREE.BufferAttribute(positions, 3));
+    return items;
   }, []);
 
   return (
-    <Float speed={2} rotationIntensity={0.5} floatIntensity={0.5}>
-      <mesh ref={meshRef} geometry={geometry} castShadow>
-        <MeshDistortMaterial
-          color="#00F0FF"
-          emissive="#8A2BE2"
-          emissiveIntensity={0.3}
-          roughness={0.2}
-          metalness={0.8}
-          distort={0.3}
-          speed={2}
-        />
-      </mesh>
-      {/* Orbital ring */}
-      <mesh ref={ringRef}>
-        <ringGeometry args={[1.8, 1.9, 64]} />
-        <meshBasicMaterial color="#00F0FF" transparent opacity={0.25} side={THREE.DoubleSide} />
-      </mesh>
-      {/* Particle field */}
-      <points>
-        <primitive object={particleGeo} attach="geometry" />
-        <pointsMaterial
-          size={0.04}
-          color="#8A2BE2"
-          transparent
-          opacity={0.6}
-          sizeAttenuation
-        />
-      </points>
+    <Float speed={2} rotationIntensity={0.2} floatIntensity={0.5}>
+      <group ref={groupRef} scale={0.8}>
+        {cuboids}
+      </group>
     </Float>
   );
 }

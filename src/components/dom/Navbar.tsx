@@ -34,17 +34,17 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <a
-            href="#home"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollTo('#home');
-            }}
-            className="text-lg font-bold text-white tracking-tight"
-          >
-            {PERSONAL_INFO.shortName}
-          </a>
+           {/* Logo */}
+           <a
+             href="#home"
+             onClick={(e) => {
+               e.preventDefault();
+               scrollTo('#home');
+             }}
+             className="text-xl font-serif text-white tracking-tight"
+           >
+             {PERSONAL_INFO.shortName}
+           </a>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-12">
@@ -63,17 +63,17 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <a
-              href={PERSONAL_INFO.whatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-2.5 bg-white text-black rounded-full text-sm font-medium hover:bg-white/90 transition-all duration-300"
-            >
-              Contact
-            </a>
-          </div>
+           {/* CTA Button */}
+           <div className="hidden md:block">
+             <a
+               href={PERSONAL_INFO.whatsapp}
+               target="_blank"
+               rel="noopener noreferrer"
+               className="px-4 py-2 text-white/70 hover:text-white transition-all duration-300 text-sm font-medium border border-white/10 rounded-full hover:border-white/30"
+             >
+               Contact
+             </a>
+           </div>
 
           {/* Mobile Menu Button */}
           <button

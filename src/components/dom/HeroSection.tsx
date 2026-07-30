@@ -34,14 +34,14 @@ export default function HeroSection() {
             >
               Fullstack Developer
             </motion.p>
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="text-5xl sm:text-6xl lg:text-8xl font-bold text-white mb-6 tracking-tight"
-            >
-              {PERSONAL_INFO.shortName}
-            </motion.h1>
+             <motion.h1
+               initial={{ opacity: 0, y: 20 }}
+               animate={{ opacity: 1, y: 0 }}
+               transition={{ delay: 0.3 }}
+               className="text-5xl sm:text-6xl lg:text-8xl font-serif text-white mb-6 tracking-tight"
+             >
+               {PERSONAL_INFO.shortName}
+             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -56,20 +56,20 @@ export default function HeroSection() {
               transition={{ delay: 0.5 }}
               className="flex flex-wrap gap-4 justify-center lg:justify-start"
             >
-              <MagneticButton 
-                href={PERSONAL_INFO.whatsapp}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white text-black hover:bg-white/90 rounded-full px-8 py-4 text-sm font-medium"
-              >
-                Let's Talk
-              </MagneticButton>
-              <MagneticButton 
-                href="#projects"
-                className="border border-white/20 text-white hover:bg-white hover:text-black rounded-full px-8 py-4 text-sm font-medium transition-all duration-300"
-              >
-                View Work
-              </MagneticButton>
+               <MagneticButton 
+                 href={PERSONAL_INFO.whatsapp}
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 className="bg-white text-black hover:bg-white/90 rounded-full px-8 py-4 text-sm font-medium"
+               >
+                 Let's Talk
+               </MagneticButton>
+               <MagneticButton 
+                 href="#projects"
+                 className="border border-white/10 text-white hover:border-white/30 rounded-full px-8 py-4 text-sm font-medium transition-all duration-300"
+               >
+                 View Work
+               </MagneticButton>
             </motion.div>
           </motion.div>
 
